@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Bayesian Dates</Name>
+  <AddInID>default</AddInID>
+  <Description>Plugins to relate Bayesian dates to geospatial objects.</Description>
+  <Version>1.0</Version>
+  <Image></Image>
+  <Author>Doug Cowie</Author>
+  <Company></Company>
+  <Date>Fri Mar 15 10:40:36 GMT 2013</Date>
+  <Targets>
+    <Target name="Desktop" version="10.0"/>
+  </Targets>
+  <AddIn language="JAVA" library="bayesianDates.jar">
+    <ArcMap>
+      <Toolbars>
+        <Toolbar caption="OxCal Dates Temporal Extension for ArcGIS" id="tgisToolbar">
+          <Items>
+            <Tool refID="importDates"/>
+          </Items>
+        </Toolbar>
+      </Toolbars>
+      <Commands>
+        <Tool caption="Import" category="TGIS" class="tgis.dateImporter" id="importDates"/>
+        <Button caption="Import" category="TGIS" class="tgis.dateImporter" id="importButton"/>
+      </Commands>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
